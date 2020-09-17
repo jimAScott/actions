@@ -7,8 +7,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     if: github.ref != 'refs/heads/master'
-    name: Don't run anything
-    run: echo "This can only be run on the master branch"
+    steps:
+      - name: Don't run the job as it's not master
+        run: echo "This job can only be run on the Master branch"
     if: github.ref == 'refs/heads/master'
     steps:
       - uses: actions/checkout@v2
