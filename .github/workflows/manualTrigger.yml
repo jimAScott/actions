@@ -13,9 +13,9 @@ on:
 jobs:
   say_hello:
     runs-on: ubuntu-latest
-    steps:
-       env:
-          TEST_VAR: A var from the build
-      - run: |
+    steps:       
+      - run:
           echo "Hello ${{ github.event.inputs.name }}!"
           echo "- in ${{ github.event.inputs.home }}!"
+          env:
+          TEST_VAR: A var from the build
