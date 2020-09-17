@@ -1,6 +1,8 @@
 name: Manually triggered Deploy to S3
 on:
   workflow_dispatch:
+    branches:
+      - master
 jobs:
   build:
     runs-on: ubuntu-latest
