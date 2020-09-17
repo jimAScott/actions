@@ -16,7 +16,8 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_ACCESS_SECRET }}
           aws-region: eu-west-1
       - name: npm install, build
-        env: TEST_VAR: A var from the build
+        env: 
+          TEST_VAR: A var from the build
         run: |
           cd site
           npm ci
