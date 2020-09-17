@@ -6,7 +6,6 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/master'
     steps:
       - uses: actions/checkout@v2
       - name: Configure AWS Credentials
@@ -22,4 +21,3 @@ jobs:
           npm run build
       - name: Deploy static site to S3 bucket
         run: aws s3 sync ./site/dist/ s3://${{ secrets.BUCKET_NAME }} --delete
-    
