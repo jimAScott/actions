@@ -17,6 +17,6 @@ jobs:
         with:
           working-directory: site
           spec: cypress/integration/test-example.js
-          build: npm run develop
+          build: npm run bild
           start: npx http-server ./dist
           wait-on: http://localhost:8080
