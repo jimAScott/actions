@@ -1,0 +1,16 @@
+name: Run cypress tests
+on: [push]
+jobs:
+  cypress-run:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+      - name: Cypress run
+        uses: cypress-io/github-action@v2
+        with:
+          working-directory: site
+          spec: cypress/integration/test-example.js
+          build: npm run develop
+          start: npx http-server ./dist
+          wait-on: http://localhost:8080

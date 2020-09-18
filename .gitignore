@@ -102,3 +102,7 @@ dist
 
 # TernJS port file
 .tern-port
+
+#Dont' commit the Cypress test results
+site/cypress/videos
+site/cypress/screenshots
