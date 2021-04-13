@@ -10,6 +10,8 @@ module.exports = function(api) {
     // Use the Data Store API here: https://gridsome.org/docs/data-store-api/
 
     console.log(`The environment you are using is ${process.env.TEST_VAR}`);
+
+    console.log("050_This is a title".replace(/^\d+_/i, ""));
   });
 
   api.createPages(({ createPage }) => {
