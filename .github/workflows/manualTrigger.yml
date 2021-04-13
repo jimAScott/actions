@@ -9,6 +9,10 @@ on:
       home:
         description: "location"
         required: false
+      site:
+        description: The site that you want to deploy
+        options: ["U.com", "Malaysia", "something else"]
+        required: true
 
 jobs:
   say_hello:
@@ -17,5 +21,6 @@ jobs:
       - run:
           echo "Hello ${{ github.event.inputs.name }}!"
           echo "- in ${{ github.event.inputs.home }}!"
+          echo " - using the site ${{github.event.inputs.site}}"
           # env:
           # TEST_VAR: A var from the build
