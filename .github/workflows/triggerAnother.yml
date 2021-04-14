@@ -6,8 +6,9 @@ jobs:
     runs-on: ubuntu-latest
     name: Invoke workflow with inputs
     steps:
+      - uses: actions/checkout@v2
       - uses: benc-uk/workflow-dispatch@v1
-      - with:
+        with:
           workflow: manualTrigger
           token: ${{ secrets.PERSONAL_TOKEN }}
           inputs: '{ "name": "Name from another workflow", "home": "London" }'
