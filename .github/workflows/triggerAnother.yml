@@ -1,4 +1,4 @@
-name: Workflow with input
+name: Triggering a worflow from another one
 on:
   workflow_dispatch:
 jobs:
