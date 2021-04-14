@@ -9,10 +9,6 @@ on:
       home:
         description: "location"
         required: false
-      site:
-        description: The site that you want to deploy
-        options: ["U.com", "Malaysia", "something else"]
-        required: true
 
 jobs:
   say_hello:

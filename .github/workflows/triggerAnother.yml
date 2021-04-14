@@ -1,0 +1,11 @@
+name: Workflow with input
+on:
+  workflow_dispatch:
+
+jobs:
+  - name: Invoke workflow with inputs
+    uses: benc-uk/workflow-dispatch@v1
+    with:
+      workflow: manualTrigger
+      token: ${{ secrets.PERSONAL_TOKEN }}
+      inputs: '{ "name": "Name from another workflow", "home": "London" }'
