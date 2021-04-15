@@ -9,6 +9,6 @@ jobs:
       - uses: actions/checkout@v2
       - uses: benc-uk/workflow-dispatch@v1
         with:
-          workflow: manualTrigger
+          workflow: Workflow with input
           token: ${{ secrets.PERSONAL_TOKEN }}
           inputs: '{ "name": "Name from another workflow", "home": "London" }'
