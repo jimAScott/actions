@@ -12,6 +12,3 @@ jobs:
           workflow: Workflow with input
           token: ${{ secrets.PERSONAL_ACCESS_TOKEN  }}
           inputs: '{ "name": "Name from another workflow", "home": "London" }'
-
-
-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
