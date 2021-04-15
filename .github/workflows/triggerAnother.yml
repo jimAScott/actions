@@ -10,5 +10,5 @@ jobs:
       - uses: benc-uk/workflow-dispatch@v1
         with:
           workflow: Workflow with input
-          token: ${{ secrets.PERSONAL_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN  }}
           inputs: '{ "name": "Name from another workflow", "home": "London" }'
