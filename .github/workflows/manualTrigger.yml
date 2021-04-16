@@ -9,6 +9,9 @@ on:
       home:
         description: "location"
         required: false
+      anotherVariable:
+        description: "Test spacing"
+        required: false
 
 jobs:
   say_hello:
