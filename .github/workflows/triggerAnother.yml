@@ -1,6 +1,6 @@
 name: Triggering a worflow from another one
 on:
-  workflow_dispatch:
+  push:
 jobs:
   invoke:
     runs-on: ubuntu-latest
@@ -10,4 +10,4 @@ jobs:
         with:
           workflow: Workflow with input
           token: ${{ secrets.PERSONAL_ACCESS_TOKEN  }}
-          inputs: '{ "name": "Name from another workflow", "home": "London" }'
+          inputs: '{ "name": "Name from another workflow on push", "home": "London" }'

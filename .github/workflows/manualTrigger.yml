@@ -1,17 +1,5 @@
 name: Workflow with input
 on:
-  push:
-    inputs:
-      name:
-        description: "Person to greet"
-        required: true
-        default: "Im in push"
-      home:
-        description: "location"
-        required: false
-      anotherVariable:
-        description: "Test spacing from push"
-        required: false
   workflow_dispatch:
     inputs:
       name:
